@@ -7,6 +7,7 @@ var StickyHeader = function(params) {
       throw "Offset 2 must be bigger than Offset 1"; 
     }
     var clone = el.cloneNode(true);
+    clone.classList.add('sticky-header');
     el.parentNode.insertBefore(clone, el.nextSibling);
     applyFixedHeader();
     window.addEventListener('scroll', function(){
